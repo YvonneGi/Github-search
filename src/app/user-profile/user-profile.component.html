@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <app-search-form (addUser)='getResponse($event)'></app-search-form>
+  </div>
+  <div class="row">
+    <div class="col md-6">
+      <div class="profile-card">
+        <div class="center">
+          <img src="{{user.photoUrl}}" alt="Avatar">
+          <h3>{{user.userProfile}}</h3>
+        </div>
+        <p>{{user.bio}}</p>
+        <br>
+        <div class="follow">
+          <button class="btn-info" type="button" name="button">Followers: {{user.followers}}</button>
+          <button class="btn-info following" type="button" name="button">Following: {{user.following}}</button>
+        </div>
+        <br>
+        <div class="center">
+          <button class="btn btn-success" type="button" name="button" (click)='toggleRepos()'
+            (click)='getRepos()'>Repos:{{user.numRepos}} <br> Click to View </button>
+        </div>
+        <br>
+        <p>Created {{user.created|dateCount}} day(s) ago.</p>
+        {{user.showRepos}}
+      </div>
+    </div>
+    <div class="col-md-6 scroll">
+      <div *ngFor='let repo of arrayRepo'>
+        <app-github-repo *ngIf='user.showRepos' [repo]='repo'></app-github-repo>
+      </div>
+    </div>
+  </div>
+</div>
