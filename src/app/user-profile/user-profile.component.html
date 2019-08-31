@@ -4,10 +4,10 @@
   </div>
   <div class="row">
     <div class="col md-6">
-      <div class="profile-card">
+      <div appBolder class="profile-card">
         <div class="center">
           <img src="{{user.photoUrl}}" alt="Avatar">
-          <h3>{{user.userProfile}}</h3>
+          <h3 appBolder >{{user.userProfile}}</h3>
         </div>
         <p>{{user.bio}}</p>
         <br>
@@ -17,18 +17,18 @@
         </div>
         <br>
         <div class="center">
+            Repositories:{{user.numRepos}}<br> 
           <button class="btn btn-success" type="button" name="button" (click)='toggleRepos()'
-            (click)='getRepos()'>Repos:{{user.numRepos}} <br> Click to View </button>
+            (click)='getRepos()'>Click to View </button>
         </div>
         <br>
-        <p>Created {{user.created|dateCount}} day(s) ago.</p>
-        {{user.showRepos}}
+        <p>Created in {{user.created|dateCount}} day(s) ago.</p>
       </div>
-    </div>
+    </div><!---end div profile-->
     <div class="col-md-6 scroll">
       <div *ngFor='let repo of arrayRepo'>
-        <app-github-repo *ngIf='user.showRepos' [repo]='repo'></app-github-repo>
+        <app-repo *ngIf='user.showRepos' [repo]='repo'></app-repo>
       </div>
-    </div>
-  </div>
+    </div><!--end div repos-->
+  </div><!--end div row --->
 </div>

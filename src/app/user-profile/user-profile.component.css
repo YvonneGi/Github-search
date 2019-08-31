@@ -1,0 +1,18 @@
+.profile-card {
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color:rgb(221, 218, 133);
+  max-height: 600px;
+  max-width: 400px;
+  /* overflow: scroll; */
+  margin-top: 20px;
+}
+img {
+  width: 50%;
+  height: 50%;
+}
+.scroll {
+  max-height: 500px;
+  overflow: scroll;
+}

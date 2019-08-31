@@ -1,20 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { UserRequestService } from '../user-http/user-request.service';
 
-import { RequestService } from '../request.service';
 import { User } from '../user';
 import { Repo } from '../repo';
 
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
-  providers: [RequestService],
+  providers: [UserRequestService],
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
   user:User;
   arrayRepo:Repo[];
 
-  constructor(private userService: RequestService) {}
+  constructor(private userService: UserRequestService) {}
 
   getResponse(username) {
     this.userService.userRequest(username);
