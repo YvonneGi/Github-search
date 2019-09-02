@@ -5,7 +5,6 @@
   background-color:rgb(221, 218, 133);
   max-height: 500px;
   max-width: 300px;
-  /* overflow: scroll; */
   margin-top: 20px;
 }
 img {
@@ -17,6 +16,5 @@ img {
   overflow: scroll;
 }
 .footer{
-  height: 200px;
-  /* margin-top: 10px; */
+  height: 150px;
 }
