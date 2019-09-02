@@ -8,7 +8,7 @@ The github app is an application designed to help the user search for repositori
 . Bootstrap
 . Git Hub
 . Terminal CLI
-## how to access it
+## HOW TO ACCESS IT
 . Firstly you have to be connected on internet
 . Then open your browser
 . and type this website: https://github.com/YvonneGi/Github-search
