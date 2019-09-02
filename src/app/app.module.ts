@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import {RepoComponent} from './repo/repo.component';
 import { DateCountPipe } from './date-count.pipe';
-// import { BolderDirective } from './bolder.directive';
+import { BolderDirective } from './bolder.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { DateCountPipe } from './date-count.pipe';
     RepoComponent,
     UserProfileComponent,
     DateCountPipe,
-    // BolderDirective
+    BolderDirective
   ],
   imports: [
     BrowserModule,

@@ -24,13 +24,13 @@
         <br>
         <p>Created in {{user.created|dateCount}} day(s) ago.</p>
       </div>
-    </div><!---end div profile-->
+    </div> <!---end div profile-->
     <div class="col-md-6 scroll">
       <div *ngFor='let repo of arrayRepo'>
         <app-repo *ngIf='user.showRepos' [repo]='repo'></app-repo>
       </div>
-    </div><!--end div repos--->
-  </div><!--end div row --->
+    </div> <!--end div repos--->
+  </div> <!--end div row --->
 </div>
 <div class="row">
   <div class="col-md-12">

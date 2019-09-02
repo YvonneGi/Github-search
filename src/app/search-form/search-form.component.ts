@@ -7,6 +7,7 @@ import { User } from '../user';
   styleUrls: ['./search-form.component.css']
 })
 export class SearchFormComponent implements OnInit {
+  // user:User;
   username = "YvonneGi";
   @Output() addUser = new EventEmitter<any>();
 
@@ -22,3 +23,4 @@ export class SearchFormComponent implements OnInit {
   }
 
 }
+

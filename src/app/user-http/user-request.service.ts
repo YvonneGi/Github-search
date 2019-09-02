@@ -6,6 +6,8 @@ import { environment } from '../../environments/environment';
 import { User } from '../user';
 import { Repo } from '../repo';
 
+
+
 @Injectable(
   // providedIn: 'root'
 )
@@ -21,7 +23,7 @@ export class UserRequestService {
   private userInput = "";
   userRequest(userInput) {
 
-    this.http.get("https://api.github.com/users/" + userInput + "?access_token=cac74cf530b6af626a1f9a284c382639fc508aa2").subscribe((response)=>{
+    this.http.get("https://api.github.com/users/" + userInput + "?access_token=90dc0c5164ef82db066906d24c918d1967b6cf72").subscribe((response)=>{
     const userData=response;
 
     this.user.photoUrl = userData["avatar_url"];
@@ -42,7 +44,7 @@ export class UserRequestService {
 
   repoRequest(userInput) {
 
-    this.http.get("https://api.github.com/users/" + userInput + "/repos?access_token=cac74cf530b6af626a1f9a284c382639fc508aa2").subscribe((response) =>{
+    this.http.get("https://api.github.com/users/" + userInput + "/repos?access_token=90dc0c5164ef82db066906d24c918d1967b6cf72").subscribe((response) =>{
       const reposData= response;
 
       this.arrayRepo = [];
